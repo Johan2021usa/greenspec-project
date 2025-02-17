@@ -19,9 +19,6 @@
             "polyfills": [
               "zone.js"
             ],
-            "localize": true,
-            "i18nMissingTranslation": "error",
-
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -51,11 +48,9 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "localize": false
+              "sourceMap": true
             }
           },
-
           "defaultConfiguration": "production"
         },
         "serve": {
@@ -66,12 +61,6 @@
             },
             "development": {
               "buildTarget": "greenspec:build:development"
-            },
-            "es": {
-              "browserTarget": "greenspec:build:development,es"
-            },
-            "en": {
-              "browserTarget": "greenspec:build:development,en"
             }
           },
           "defaultConfiguration": "development"
