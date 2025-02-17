@@ -1,0 +1,118 @@
+<nav class="navbar">
+  <!-- Icon container -->
+  @if(!helperReturnState){
+    <article #iconContainer class="navbar__icon-container">
+      <img src="assets/images/logo-greenspec.png" alt="navbar__icon" class="navbar__icon">
+    </article>
+  }@else{
+    <article #iconContainer class="navbar__return-group" (click)="returnHelper(false)">
+      <svg class="navbar__arrow-container" xmlns="http://www.w3.org/2000/svg">
+        <path class="navbar__arrow-icon" d="M3.21885 6.66673L6.79485 10.2427L5.85205 11.1855L0.666585 6.00007L5.85205 0.814667L6.79485 1.75747L3.21885 5.3334L11.3333 5.3334L11.3333 6.66673L3.21885 6.66673Z"/>
+      </svg>
+      <p class="navbar__return-title">Back</p>
+    </article>
+  }
+
+  <section class="navbar__buttons-container" >
+    <!-- Toggle container -->
+    <article class="navbar__toggle-container" (click)="toggleDarkMode($event)">
+      <div #buttonActive class="navbar__toggle-button --active">
+        <img class="navbar__toggle-img" src="assets/vectors/navbar__button-sun--light.png" alt="">
+      </div>
+      <div class="navbar__toggle-background">
+        <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-sun.png" alt="">
+      </div>
+      <div class="navbar__toggle-background">
+        <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-moon.png" alt="moon-button-icon">
+      </div>
+    </article>
+    <!-- Menu button container -->
+    <!-- <article class="navbar__menu-container" (click)="toggleMenu($event)">
+      <img src="assets/vectors/navbar__button-menu.png" alt="" class="navbar__menu-button">
+    </article> -->
+    <svg class="navbar__menu-container" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" (click)="toggleMenu($event)">
+      <path #menuBUtton class="navbar__menu-button" d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"/>
+    </svg>
+  </section>
+</nav>
+
+<menu #menuList class="menu --visibility">
+
+  <article class="menu__functions-container">
+
+    <article class="menu__toggle-lang">
+      <img src="assets/vectors/menu__function-icon.png" alt="language-icon" class="menu__toggle-lang-icon">
+      <select class="menu__function-selector">
+        <option value="EN" class="menu__selector-option">EN</option>
+        <option value="ES" class="menu__selector-option">ES</option>
+      </select>
+    </article>
+
+    <section class="menu__buttons-group">
+      <article class="menu__button" (click)="returnHelper(true)">
+        <img src="assets/vectors/menu__button-icon.png" alt="user-icon" class="menu__button-icon">
+        <h3 class="menu__button-title">Sign in</h3>
+      </article>
+
+      <article class="menu__button --action" (click)="returnHelper(true)">
+        <h3 class="menu__button-title --black">Contact us</h3>
+      </article>
+    </section>
+  </article>
+
+  <article class="menu__option" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="hideMenu()">
+    <img src="assets/vectors/menu__option-icon-home.png" alt="home-icon" class="menu__option-icon">
+    <h3 class="menu__option-title">Home</h3>
+  </article>
+
+  <article class="menu__option" [routerLink]="['/solutions']" routerLinkActive="router-link-active" (click)="returnHelper(true)">
+    <img src="assets/vectors/menu__option-icon-solutions.png" alt="" class="menu__option-icon">
+    <h3 class="menu__option-title">Solutions</h3>
+  </article>
+
+  <article class="menu__option" [routerLink]="['/about-us']" routerLinkActive="router-link-active" (click)="returnHelper(true)">
+    <img src="assets/vectors/menu__option-icon-about.png" alt="" class="menu__option-icon">
+    <h3 class="menu__option-title">About us</h3>
+  </article>
+
+  <!-- Toggle products -->
+   <section class="menu__option-sub-container">
+     <article class="menu__option --no-gap" (click)="toggleProductsMenu($event)">
+       <section class="menu__option-group">
+         <img src="assets/vectors/menu__option-icon-products.png" alt="products-icon" class="menu__option-icon">
+         <h3 class="menu__option-title">Our products</h3>
+       </section>
+       <!-- <img #arrowProducts src="assets/vectors/menu__option-row.svg" alt="arrow-button" class="menu__option-row"> -->
+        <svg #arrowProducts class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+        </svg>
+     </article>
+     <section #dropProducts class="menu__option-drop-container">
+       <article class="menu__drop-item" (click)="returnHelper(true)">Soil sensors</article>
+       <article class="menu__drop-item" (click)="returnHelper(true)">Climate sensors</article>
+       <article class="menu__drop-item" (click)="returnHelper(true)">loT sensors</article>
+       <article class="menu__drop-item" (click)="returnHelper(true)">Water sensors</article>
+       <article class="menu__drop-item" (click)="returnHelper(true)">Hardware</article>true
+     </section>
+  </section>
+
+  <!-- Toggle Knowledge Hub -->
+  <section class="menu__option-sub-container">
+    <article class="menu__option --no-gap" (click)="toggleKnowledgeMenu($event)">
+      <section class="menu__option-group">
+        <img src="assets/vectors/menu__option-icon-knowledge.png" alt="icon-knowledge" class="menu__option-icon">
+        <h3 class="menu__option-title">Knowledge hub</h3>
+      </section>
+      <!-- <img #arrowKnowledge src="assets/vectors/menu__option-row.png" alt="arrow-button" class="menu__option-row"> -->
+      <svg #arrowKnowledge class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+      </svg>
+    </article>
+    <section #dropKnowledge class="menu__option-drop-container">
+      <article class="menu__drop-item" (click)="returnHelper(true)">News</article>
+      <article class="menu__drop-item" (click)="returnHelper(true)">Manual guides</article>
+      <article class="menu__drop-item" (click)="returnHelper(true)">Case studies</article>
+    </section>
+ </section>
+
+</menu>

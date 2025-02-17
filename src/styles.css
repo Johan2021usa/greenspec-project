@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Light background variables */
+  --white: #ffffff;
+  --gray-background: #FAFAFA;
+
+  /* Gray light variables */
+  --gray-50: #F2F2F2;
+  --gray-100: #EBEBEB;
+  --gray-200: #E6E6E6;
+  --gray-300: #DCDCDC;
+  --gray-400: #C9C9C9;
+  --gray-500: #ABABAB;
+  --gray-600: #9F9F9F;
+  --gray-700: #6E6E6E;
+  --gray-800: #7D7D7D;
+  --gray-900: #171717;
+
+  /* Gray light variables */
+  --green-50: #ECFDF6;
+  --green-100: #E6FCF1;
+  --green-200: #D2FAED;
+  --green-300: #B9F5DF;
+  --green-400: #82EC88;
+  --green-500: #48E195;
+  --green-600: #28A980;
+  --green-700: #269154;
+  --green-800: #0F7E54;
+  --green-900: #00391F;
+
+  /* Font family */
+  --geist-family : "Geist", serif;
+
+  /* Dark background variables */
+  --black: #0A0A0A;
+  --black-alter: #3C3C3C;
+
+  /* Gray dark variables */
+  --Dgray-50: #1A1A1A;
+  --Dgray-100: #1F1F1F;
+  --Dgray-200: #292929;
+  --Dgray-300: #2E2E2E;
+  --Dgray-400: #454545;
+  --Dgray-500: #676767;
+  --Dgray-600: #8F8F8F;
+  --Dgray-700: #A7A7A7;
+  --Dgray-800: #E6E6E6;
+  --Dgray-900: #EDEDED;
+
+
+  /* Green dark variables */
+  --Dgreen-50: #002616;
+  --Dgreen-100: #003227;
+  --Dgreen-200: #003929;
+  --Dgreen-300: #004632;
+  --Dgreen-400: #00673E;
+  --Dgreen-500: #4BE196;
+  --Dgreen-600: #00AC8A;
+  --Dgreen-700: #009474;
+  --Dgreen-800: #00CA9E;
+  --Dgreen-900: #D8FFF3;
+
+  /* variables them */
+  /* NAVBAR - Fonts */
+  --back-ground: var(--white);
+  --lang-fonts-clr: var(--gray-700); /* Toggle fonts color */
+  --sign-in-clr: var(--green-900); /* Sign in button font color */
+  --contact-font-clr: var(--black-alter); /* Contact us font color */
+  --menu-title-clr: var(--gray-900); /* Font color menu option*/
+  --drop-item-clr: var(--gray-700); /* font color drop option*/
+  --return-arrow-clr: var(var(--green-900));
+  /* NAVBAR - hovers/borders/arrows */
+  --active-menu-clr: var(--gray-50);
+  --border-clr: var(--gray-200);
+  --arrow-clr: var(--gray-900);
+  --menu-bt-clr: var(--green-900);
+}
+
+body{
+  width: 100vw;
+  /* padding: 1.25rem; */
+  background-color: var(--back-ground);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+}
