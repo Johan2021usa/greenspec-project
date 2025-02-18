@@ -95,6 +95,12 @@
   gap: 0;
   border: none;
 }
+.group-option{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  padding: 0;
+}
 .menu__option-sub-container{
   display: flex;
   flex-direction: column;
@@ -147,8 +153,6 @@
   box-sizing: border-box;
   transition: all 200ms ease-in-out allow-discrete;
   &.--visibility-drop{
-    display: flex;
-    flex-direction: column;
     padding: 0;
     scale: 1;
     opacity: 1;
@@ -167,14 +171,14 @@
 }
 .menu__drop-item{
   display: flex;
-  padding: 0 10px;
+  padding: 0.5rem 0.625rem;
   align-items: center;
-  height:2.25rem;
+  height: 36px;
   color:var(--drop-item-clr);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 19.6px;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .menu__drop-item:active{
   background-color: var(--active-menu-clr);
