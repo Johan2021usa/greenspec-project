@@ -1,5 +1,6 @@
 .banner{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image:
@@ -20,18 +21,32 @@
   box-sizing: border-box;
   /*font style*/
   font-family: var(--geist-family);
-  color: var(--title-banner);
+  color: var(--fnt-clr-banner);
   font-weight: 700;
   line-height: 72px;
   font-size: 3.75rem;
   text-align: center;
 }
+.banner__subtitle{
+  max-width: 34.438rem;
+  height: fit-content;
+  /*font-style*/
+  font-family: var(--geist-family);
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 24px;
+  color:var(--fnt-clr-banner);
+}
 .--light{
-  color: var(--span-banner);
+  color: var(--fnt-clr-span-banner);
 }
 @media screen and (max-width: 400px) {
   .banner__title,
   .--light{
     font-size: 3rem;
+  }
+  .banner__subtitle{
+    width: 75%;
   }
 }

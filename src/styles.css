@@ -76,8 +76,8 @@
   --menu-bt-clr: var(--green-900);
 
   /*Hero/banner*/
-  --title-banner: var(--white);
-  --span-banner: var(--green-500);
+  --fnt-clr-banner: var(--white);
+  --fnt-clr-span-banner: var(--green-500);
 }
 
 body{
