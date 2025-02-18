@@ -30,6 +30,7 @@
 .banner__subtitle{
   max-width: 34.438rem;
   height: fit-content;
+  margin: 0;
   /*font-style*/
   font-family: var(--geist-family);
   text-align: center;
@@ -41,12 +42,16 @@
 .--light{
   color: var(--fnt-clr-span-banner);
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 431px) {
+  .banner{
+    padding: 0 1rem;
+    min-height: calc(100vh - 5.125rem);
+  }
   .banner__title,
   .--light{
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .banner__subtitle{
-    width: 75%;
+    width: 70%;
   }
 }
