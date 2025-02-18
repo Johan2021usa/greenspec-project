@@ -74,6 +74,10 @@
   --border-clr: var(--gray-200);
   --arrow-clr: var(--gray-900);
   --menu-bt-clr: var(--green-900);
+
+  /*Hero/banner*/
+  --title-banner: var(--white);
+  --span-banner: var(--green-500);
 }
 
 body{
