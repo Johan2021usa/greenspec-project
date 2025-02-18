@@ -47,12 +47,16 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-button-banner);
+  border: none;
   height: 48px;
   width: 169px;
-  /* padding: 10px 12px; */
   border-radius: 8px;
   gap: 10px;
   box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+}
+.button:active{
+  background-color: var(--green-600);
 }
 .button__text{
   margin: 0;

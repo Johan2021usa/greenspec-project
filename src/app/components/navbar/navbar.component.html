@@ -1,5 +1,6 @@
 <nav class="navbar">
-  <!-- Icon container -->
+
+  <!-- Icon container/ Mobile version -->
   @if(!helperReturnState){
     <article #iconContainer class="navbar__icon-container">
       <img src="assets/images/logo-greenspec.png" alt="navbar__icon" class="navbar__icon">
@@ -12,7 +13,6 @@
       <p class="navbar__return-title">Back</p>
     </article>
   }
-
   <section class="navbar__buttons-container" >
     <!-- Toggle container -->
     <article class="navbar__toggle-container" (click)="toggleDarkMode($event)">
@@ -26,20 +26,58 @@
         <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-moon.png" alt="moon-button-icon">
       </div>
     </article>
-    <!-- Menu button container -->
-    <!-- <article class="navbar__menu-container" (click)="toggleMenu($event)">
-      <img src="assets/vectors/navbar__button-menu.png" alt="" class="navbar__menu-button">
-    </article> -->
+
     <svg class="navbar__menu-container" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" (click)="toggleMenu($event)">
       <path #menuBUtton class="navbar__menu-button" d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"/>
     </svg>
+
+  </section>
+
+  <!-- Desktop version -->
+  <section class="navbar__navigation-group">
+
+    <article class="navbar__pages-group">
+      <img src="assets/images/logo-greenspec.png" alt="navbar__icon" class="navbar__icon">
+
+      <section class="pages">
+        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <img src="assets/vectors/menu__option-icon-home.png"
+          alt="home-icon" class="pages__option-icon">
+          <h3 class="pages__option-title">Home</h3>
+        </article>
+        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <img src="assets/vectors/menu__option-icon-solutions.png"
+          alt="home-icon" class="pages__option-icon">
+          <h3 class="pages__option-title">Solutions</h3>
+        </article>
+        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <img src="assets/vectors/menu__option-icon-about.png"
+          alt="home-icon" class="pages__option-icon">
+          <h3 class="pages__option-title">About us</h3>
+        </article>
+        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <img src="assets/vectors/menu__option-icon-products.png"
+          alt="home-icon" class="pages__option-icon">
+          <h3 class="pages__option-title">Our products</h3>
+        </article>
+        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <img src="assets/vectors/menu__option-icon-knowledge.png"
+          alt="home-icon" class="pages__option-icon">
+          <h3 class="pages__option-title">Knowledge hub</h3>
+        </article>
+      </section>
+
+    </article>
+
+    <article class="navbar__options-group">
+
+    </article>
   </section>
 </nav>
 
 <menu #menuList class="menu --visibility">
 
   <article class="menu__functions-container">
-
     <article class="menu__toggle-lang">
       <img src="assets/vectors/menu__function-icon.png" alt="language-icon" class="menu__toggle-lang-icon">
       <select class="menu__function-selector">
@@ -93,7 +131,7 @@
          <article class="menu__drop-item" (click)="returnHelper(true)">Climate sensors</article>
          <article class="menu__drop-item" (click)="returnHelper(true)">loT sensors</article>
          <article class="menu__drop-item" (click)="returnHelper(true)">Water sensors</article>
-         <article class="menu__drop-item" (click)="returnHelper(true)">Hardware</article>true
+         <article class="menu__drop-item" (click)="returnHelper(true)">Hardware</article>
        </section>
     </section>
 
@@ -116,6 +154,5 @@
       </section>
    </section>
   </section>
-
 
 </menu>
