@@ -78,6 +78,8 @@
   /*Hero/banner*/
   --fnt-clr-banner: var(--white);
   --fnt-clr-span-banner: var(--green-500);
+  --bg-button-banner: var(--green-500);
+  --fnt-clr-button-banner: var(--black-alter);
 }
 
 body{

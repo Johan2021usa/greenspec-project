@@ -42,9 +42,36 @@
 .--light{
   color: var(--fnt-clr-span-banner);
 }
-@media screen and (max-width: 431px) {
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-button-banner);
+  height: 48px;
+  width: 169px;
+  /* padding: 10px 12px; */
+  border-radius: 8px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.button__text{
+  margin: 0;
+  font-family: var(--geist-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: var(--fnt-clr-button-banner);
+}
+.button__icon-cont{
+  width:  9px;
+  height: 8.01px;
+}
+.button__icon{
+  fill: var(--fnt-clr-button-banner);
+}
+@media screen and (max-width: 500px) {
   .banner{
-    padding: 0 1rem;
+    padding: 0 2rem;
     min-height: calc(100vh - 5.125rem);
   }
   .banner__title,
@@ -52,6 +79,6 @@
     font-size: 2.8rem;
   }
   .banner__subtitle{
-    width: 70%;
+    width: 80%;
   }
 }
