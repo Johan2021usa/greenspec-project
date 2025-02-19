@@ -83,7 +83,6 @@
 }
 
 body{
-  width: 100vw;
   /* padding: 1.25rem; */
   background-color: var(--back-ground);
   padding: 0;
