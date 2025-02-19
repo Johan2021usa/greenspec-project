@@ -69,6 +69,7 @@
   width: 4.125rem;
   border:0.8px solid var(--border-clr);
   border-radius: 50px;
+  cursor: pointer;
 }
 .navbar__toggle-button{
   display: flex;
@@ -169,7 +170,13 @@
     gap: 4px;
     padding: 0 8px;
     box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 60px;
+    transition: all 200ms ease-in-out;
     /* border: 1px solid red; */
+  }
+  .pages__option:hover{
+    background-color: var(--active-menu-clr);
   }
   .pages__option-icon{
     width: 0.917rem;
@@ -182,6 +189,59 @@
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.05rem;
+    transition: all 200ms ease-in-out;
+  }
+  .pages__drop-cont{
+    scale: 0;
+    position: absolute;
+    /* display: none; */
+    width: 0;
+    height: 0;
+    left: 38.2rem;
+    top: 3.9rem;
+    opacity: 0;
+    transition: all 200ms ease-in-out allow-discrete;
+    &.--active-d{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      scale: 1;
+      opacity: 1;
+      padding: 4px;
+      width: 13.75rem;
+      height: 11.75rem;
+      background-color: var(--back-ground);
+      border: 1px solid var(--border-clr);
+      border-radius: 4px;
+    }
+  }
+  .--alt-position-k{
+    left: 45.5rem;
+  }
+  .--active-d-k{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    scale: 1;
+    opacity: 1;
+    padding: 4px;
+    width: 13.75rem;
+    height: 7.25rem;
+    background-color: var(--back-ground);
+    border: 1px solid var(--border-clr);
+    border-radius: 4px;
+  }
+  .pages__drop-item{
+    padding: 8px 10px;
+    height: 36px;
+    cursor: pointer;
+    color: var(--drop-item-clr);
+    font-family: var(--geist-family);
+    font-size: 0.875rem ;
+    transition: all 200ms ease-in-out;
+  }
+  .pages__drop-item:hover{
+    background-color: var(--active-menu-clr);
   }
 
 }

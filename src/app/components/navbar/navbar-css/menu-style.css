@@ -28,6 +28,9 @@
   box-sizing: border-box;
   font-family: var(--geist-family);
 }
+.--gap{
+  gap: 12px;
+}
 .menu__toggle-lang{
   display: flex;
   justify-content: center;
@@ -38,6 +41,7 @@
   border-radius: 60px;
   border: 1px solid var(--border-clr);
   box-sizing: border-box;
+  cursor: pointer;
 }
 .menu__toggle-lang-icon{
   width: 0.979rem;
@@ -51,6 +55,7 @@
   transition: all 500ms ease-in-out;
   font-size: 0.875rem;
   color: var(--lang-fonts-clr);
+  cursor: pointer;
 }
 .menu__function-selector:focus{
   outline: none
@@ -74,6 +79,11 @@
   border-radius: 6px;
   border: 1px solid var(--border-clr);
   box-sizing: border-box;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.menu__button:active{
+  background-color: var(--green-600);
 }
 .menu__button-icon{
   height: 0.875rem;
@@ -85,6 +95,7 @@
   font-weight: 500;
   line-height: 16.8px;
   color: var(--sign-in-clr);
+  transition: all 200ms ease-in-out;
   &.--black{
     color: var(--contact-font-clr);
   }
@@ -177,7 +188,7 @@
   padding: 0.5rem 0.625rem;
   align-items: center;
   height: 36px;
-  color:var(--drop-item-clr);
+  color: var(--drop-item-clr);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 19.6px;

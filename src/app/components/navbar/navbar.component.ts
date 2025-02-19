@@ -9,11 +9,14 @@ import {Router, RouterLink } from '@angular/router';
   styleUrls: ['./navbar.component.css', './navbar-css/menu-style.css']
 })
 export class NavbarComponent implements OnInit, AfterViewInit{
-
+  activeBut!:HTMLElement;
   @ViewChild('buttonActive') buttonActive!: ElementRef;
+  @ViewChild('buttonActiveDesk') buttonActiveDesk!: ElementRef;
   @ViewChild('menuList') menuList!: ElementRef;
   @ViewChild('dropProducts') dropProducts!: ElementRef;
+  @ViewChild('dropProductsDesk') dropProductsDesk!: ElementRef;
   @ViewChild('dropKnowledge') dropKnowledge!: ElementRef;
+  @ViewChild('dropKnowledgeDesk') dropKnowledgeDesk!: ElementRef;
   @ViewChild('arrowProducts') arrowProducts!: ElementRef;
   @ViewChild('arrowKnowledge') arrowKnowledge!: ElementRef;
   @ViewChild('menuBUtton') menuButton!: ElementRef;
@@ -33,31 +36,41 @@ export class NavbarComponent implements OnInit, AfterViewInit{
 
   ngAfterViewInit(): void {
     const activeBut:HTMLElement = this.buttonActive.nativeElement;
+    const activeButDesk:HTMLElement = this.buttonActiveDesk.nativeElement;
     if(localStorage.getItem("darkMode")==="true"){ // automatically run once the component is called, then..
       // CSS styles and vectors colors
       activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-moon--light-mini.png");
       activeBut.classList.add("--movement");
+      activeButDesk.children[0].setAttribute("src", "assets/vectors/navbar__button-moon--light-mini.png");
+      activeButDesk.classList.add("--movement");
       this.setDarkTheme(); // Setting themes - dark
     }else{
       activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-sun--light.png");
       activeBut.classList.remove("--movement");
+      activeButDesk.children[0].setAttribute("src", "assets/vectors/navbar__button-sun--light.png");
+      activeButDesk.classList.remove("--movement");
       this.setLightTheme(); // Setting themes - light
     }
   }
 
-  toggleDarkMode(event: Event):void{
-    const activeBut:HTMLElement = this.buttonActive.nativeElement;
+  toggleDarkMode(option: number):void{
+    if(option===1){
+      this.activeBut = this.buttonActive.nativeElement;
+    }else if(option===2){
+      this.activeBut = this.buttonActiveDesk.nativeElement;
+    }
+
     this.rootStyles = document.documentElement.style; // Getting the :root variables
-    if(activeBut.children[0].getAttribute("src")==="assets/vectors/navbar__button-sun--light.png"){
-      activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-moon--light-mini.png");
+    if(this.activeBut.children[0].getAttribute("src")==="assets/vectors/navbar__button-sun--light.png"){
+      this.activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-moon--light-mini.png");
       localStorage.setItem("darkMode", "true");
       this.setDarkTheme();
     }else{
-      activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-sun--light.png");
+      this.activeBut.children[0].setAttribute("src", "assets/vectors/navbar__button-sun--light.png");
       localStorage.setItem("darkMode", "false");
       this.setLightTheme();
     }
-    activeBut.classList.toggle("--movement");
+    this.activeBut.classList.toggle("--movement");
 
     // getComputedStyle(document.documentElement).getPropertyValue("--back-ground").trim();
   }
@@ -146,4 +159,35 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--menu-bt-clr","var(--green-900)");
   }
 
+  toggleProductsDesk():void{
+    const dropProductsDesk:HTMLElement = this.dropProductsDesk.nativeElement;
+    const arrowProductsDesk:HTMLElement = this.arrowProducts.nativeElement;
+    dropProductsDesk.classList.toggle("--active-d");
+    arrowProductsDesk.classList.toggle("--up");
+    this.hideDrop(2);
+  }
+
+  toggleKnowledgeDesk():void{
+    const dropKnowledgeDesk:HTMLElement = this.dropKnowledgeDesk.nativeElement;
+    const arrowKnowledgeDesk:HTMLElement = this.arrowKnowledge.nativeElement;
+    dropKnowledgeDesk.classList.toggle("--active-d-k");
+    arrowKnowledgeDesk.classList.toggle("--up");
+    this.hideDrop(1);
+  }
+
+  hideDrop(option: number):void{
+    const dropProductsDesk:HTMLElement = this.dropProductsDesk.nativeElement;
+    const arrowProductsDesk:HTMLElement = this.arrowProducts.nativeElement;
+    const dropKnowledgeDesk:HTMLElement = this.dropKnowledgeDesk.nativeElement;
+    const arrowKnowledgeDesk:HTMLElement = this.arrowKnowledge.nativeElement;
+    if(option===1){
+      dropProductsDesk.classList.remove("--active-d");
+      arrowProductsDesk.classList.remove("--up");
+    }
+    else if(option===2){
+      dropKnowledgeDesk.classList.remove("--active-d-k");
+      arrowKnowledgeDesk.classList.remove("--up");
+    }
+
+  }
 }

@@ -15,7 +15,7 @@
   }
   <section class="navbar__buttons-container" >
     <!-- Toggle container -->
-    <article class="navbar__toggle-container" (click)="toggleDarkMode($event)">
+    <article class="navbar__toggle-container" (click)="toggleDarkMode(1)">
       <div #buttonActive class="navbar__toggle-button --active">
         <img class="navbar__toggle-img" src="assets/vectors/navbar__button-sun--light.png" alt="">
       </div>
@@ -45,36 +45,88 @@
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Home</h3>
         </article>
-        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <article class="pages__option" [routerLink]="['/solutions']" routerLinkActive="router-link-active">
           <img src="assets/vectors/menu__option-icon-solutions.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Solutions</h3>
         </article>
-        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <article class="pages__option" [routerLink]="['/about-us']" routerLinkActive="router-link-active">
           <img src="assets/vectors/menu__option-icon-about.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">About us</h3>
         </article>
-        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+
+        <article class="pages__option" (click)="toggleProductsDesk()">
           <img src="assets/vectors/menu__option-icon-products.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Our products</h3>
+          <svg #arrowProducts class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
         </article>
-        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+
+        <section #dropProductsDesk class="pages__drop-cont">
+            <article class="pages__drop-item">Soil sensors</article>
+            <article class="pages__drop-item">Climate sensors</article>
+            <article class="pages__drop-item">loT Sensors</article>
+            <article class="pages__drop-item">Water sensors</article>
+            <article class="pages__drop-item">Hardware.</article>
+        </section>
+
+        <article class="pages__option" (click)="toggleKnowledgeDesk()">
           <img src="assets/vectors/menu__option-icon-knowledge.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Knowledge hub</h3>
+          <svg #arrowKnowledge class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
         </article>
-      </section>
 
+        <section #dropKnowledgeDesk class="pages__drop-cont --alt-position-k">
+          <article class="pages__drop-item">News</article>
+          <article class="pages__drop-item">Manual guides</article>
+          <article class="pages__drop-item">Case studies</article>
+        </section>
+      </section>
     </article>
 
-    <article class="navbar__options-group">
+    <article class="menu__functions-container --gap">
 
+      <article class="menu__toggle-lang">
+        <img src="assets/vectors/menu__function-icon.png" alt="language-icon" class="menu__toggle-lang-icon">
+        <select class="menu__function-selector">
+          <option value="EN" class="menu__selector-option">EN</option>
+          <option value="ES" class="menu__selector-option">ES</option>
+        </select>
+      </article>
+
+      <article class="navbar__toggle-container" (click)="toggleDarkMode(2)">
+        <div #buttonActiveDesk class="navbar__toggle-button --active">
+          <img class="navbar__toggle-img" src="assets/vectors/navbar__button-sun--light.png" alt="">
+        </div>
+        <div class="navbar__toggle-background">
+          <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-sun.png" alt="">
+        </div>
+        <div class="navbar__toggle-background">
+          <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-moon.png" alt="moon-button-icon">
+        </div>
+      </article>
+
+      <section class="menu__buttons-group">
+        <article class="menu__button">
+          <img src="assets/vectors/menu__button-icon.png" alt="user-icon" class="menu__button-icon">
+          <h3 class="menu__button-title">Sign in</h3>
+        </article>
+
+        <article class="menu__button --action">
+          <h3 class="menu__button-title --black">Contact us</h3>
+        </article>
+      </section>
     </article>
   </section>
 </nav>
 
+<!-- Mobile menu -->
 <menu #menuList class="menu --visibility">
 
   <article class="menu__functions-container">
@@ -121,7 +173,6 @@
            <img src="assets/vectors/menu__option-icon-products.png" alt="products-icon" class="menu__option-icon">
            <h3 class="menu__option-title">Our products</h3>
          </section>
-         <!-- <img #arrowProducts src="assets/vectors/menu__option-row.svg" alt="arrow-button" class="menu__option-row"> -->
           <svg #arrowProducts class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
           </svg>
