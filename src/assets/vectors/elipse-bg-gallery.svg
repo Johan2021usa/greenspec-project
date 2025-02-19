@@ -1,0 +1,9 @@
+<svg width="1440" height="412" viewBox="0 0 1440 412" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse opacity="0.4" cx="757" cy="206" rx="1440" ry="206" fill="url(#paint0_radial_166_1762)"/>
+<defs>
+<radialGradient id="paint0_radial_166_1762" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(757 206) rotate(90) scale(206 1440)">
+<stop stop-color="#4BE196"/>
+<stop offset="0.895" stop-color="#4BE196" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

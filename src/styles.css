@@ -4,6 +4,10 @@
   --white: #ffffff;
   --gray-background: #FAFAFA;
 
+  /* Dark background variables */
+  --black: #0A0A0A;
+  --black-alter: #3C3C3C;
+
   /* Gray light variables */
   --gray-50: #F2F2F2;
   --gray-100: #EBEBEB;
@@ -31,10 +35,6 @@
   /* Font family */
   --geist-family : "Geist", serif;
 
-  /* Dark background variables */
-  --black: #0A0A0A;
-  --black-alter: #3C3C3C;
-
   /* Gray dark variables */
   --Dgray-50: #1A1A1A;
   --Dgray-100: #1F1F1F;
@@ -46,7 +46,6 @@
   --Dgray-700: #A7A7A7;
   --Dgray-800: #E6E6E6;
   --Dgray-900: #EDEDED;
-
 
   /* Green dark variables */
   --Dgreen-50: #002616;
@@ -61,7 +60,7 @@
   --Dgreen-900: #D8FFF3;
 
   /* variables them */
-  /* NAVBAR - Fonts */
+  /* NAVBAR-Fonts */
   --back-ground: var(--white);
   --lang-fonts-clr: var(--gray-700); /* Toggle fonts color */
   --sign-in-clr: var(--green-900); /* Sign in button font color */
@@ -69,17 +68,22 @@
   --menu-title-clr: var(--gray-900); /* Font color menu option*/
   --drop-item-clr: var(--gray-700); /* font color drop option*/
   --return-arrow-clr: var(var(--green-900));
-  /* NAVBAR - hovers/borders/arrows */
+  /* NAVBAR-hovers/borders/arrows */
   --active-menu-clr: var(--gray-50);
   --border-clr: var(--gray-200);
   --arrow-clr: var(--gray-900);
   --menu-bt-clr: var(--green-900);
-
-  /*Hero/banner*/
+  /*Hero-Titles*/
   --fnt-clr-banner: var(--white);
   --fnt-clr-span-banner: var(--green-500);
   --bg-button-banner: var(--green-500);
   --fnt-clr-button-banner: var(--black-alter);
+  /*Gallery/ icons */
+  --icon-bg-clr: var(--gray-50);
+  --icon-fill-clr: var(--gray-700);
+
+
+
 }
 
 body{
