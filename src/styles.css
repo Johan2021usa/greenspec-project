@@ -69,7 +69,7 @@
   --drop-item-clr: var(--gray-700); /* font color drop option*/
   --return-arrow-clr: var(var(--green-900));
   /* NAVBAR-hovers/borders/arrows */
-  --active-menu-clr: var(--gray-50);
+  --active-menu-clr: var(--gray-100);
   --border-clr: var(--gray-200);
   --arrow-clr: var(--gray-900);
   --menu-bt-clr: var(--green-900);

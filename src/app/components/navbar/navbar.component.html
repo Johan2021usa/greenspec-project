@@ -40,21 +40,21 @@
       <img src="assets/images/logo-greenspec.png" alt="navbar__icon" class="navbar__icon">
 
       <section class="pages">
-        <article class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <button class="pages__option" [routerLink]="['/home']" routerLinkActive="router-link-active">
           <img src="assets/vectors/menu__option-icon-home.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Home</h3>
-        </article>
-        <article class="pages__option" [routerLink]="['/solutions']" routerLinkActive="router-link-active">
+        </button>
+        <button class="pages__option" [routerLink]="['/solutions']" routerLinkActive="router-link-active">
           <img src="assets/vectors/menu__option-icon-solutions.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">Solutions</h3>
-        </article>
-        <article class="pages__option" [routerLink]="['/about-us']" routerLinkActive="router-link-active">
+        </button>
+        <button class="pages__option" [routerLink]="['/about-us']" routerLinkActive="router-link-active">
           <img src="assets/vectors/menu__option-icon-about.png"
           alt="home-icon" class="pages__option-icon">
           <h3 class="pages__option-title">About us</h3>
-        </article>
+        </button>
 
         <article class="pages__option" (click)="toggleProductsDesk()">
           <img src="assets/vectors/menu__option-icon-products.png"
@@ -100,7 +100,7 @@
         </select>
       </article>
 
-      <article class="navbar__toggle-container" (click)="toggleDarkMode(2)">
+      <button class="navbar__toggle-container" (click)="toggleDarkMode(2)">
         <div #buttonActiveDesk class="navbar__toggle-button --active">
           <img class="navbar__toggle-img" src="assets/vectors/navbar__button-sun--light.png" alt="">
         </div>
@@ -110,19 +110,24 @@
         <div class="navbar__toggle-background">
           <img class="navbar__toggle-img --small" src="assets/vectors/navbar__button-moon.png" alt="moon-button-icon">
         </div>
-      </article>
+      </button>
 
       <section class="menu__buttons-group">
-        <article class="menu__button">
-          <img src="assets/vectors/menu__button-icon.png" alt="user-icon" class="menu__button-icon">
+        <button class="menu__button --secondary">
+           <article class="menu__button-icon-cont">
+             <svg class="menu__button-icon" viewBox="0 0 12 15" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.3332 14.6665H9.99984V13.3332C9.99984 12.2286 9.10444 11.3332 7.99984 11.3332H3.99984C2.89527 11.3332 1.99984 12.2286 1.99984 13.3332V14.6665H0.666504V13.3332C0.666504 11.4922 2.15889 9.99984 3.99984 9.99984H7.99984C9.84077 9.99984 11.3332 11.4922 11.3332 13.3332V14.6665ZM5.99984 8.6665C3.7907 8.6665 1.99984 6.87564 1.99984 4.6665C1.99984 2.45736 3.7907 0.666504 5.99984 0.666504C8.20897 0.666504 9.99984 2.45736 9.99984 4.6665C9.99984 6.87564 8.20897 8.6665 5.99984 8.6665ZM5.99984 7.33317C7.47257 7.33317 8.6665 6.13926 8.6665 4.6665C8.6665 3.19374 7.47257 1.99984 5.99984 1.99984C4.52708 1.99984 3.33317 3.19374 3.33317 4.6665C3.33317 6.13926 4.52708 7.33317 5.99984 7.33317Z"/>
+             </svg>
+           </article>
           <h3 class="menu__button-title">Sign in</h3>
-        </article>
+        </button>
 
-        <article class="menu__button --action">
+        <button class="menu__button --action">
           <h3 class="menu__button-title --black">Contact us</h3>
-        </article>
+        </button>
       </section>
     </article>
+
   </section>
 </nav>
 
@@ -140,7 +145,11 @@
 
     <section class="menu__buttons-group">
       <article class="menu__button" (click)="returnHelper(true)">
-        <img src="assets/vectors/menu__button-icon.png" alt="user-icon" class="menu__button-icon">
+        <article class="menu__button-icon-cont">
+          <svg class="menu__button-icon"  viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.3332 14.6665H9.99984V13.3332C9.99984 12.2286 9.10444 11.3332 7.99984 11.3332H3.99984C2.89527 11.3332 1.99984 12.2286 1.99984 13.3332V14.6665H0.666504V13.3332C0.666504 11.4922 2.15889 9.99984 3.99984 9.99984H7.99984C9.84077 9.99984 11.3332 11.4922 11.3332 13.3332V14.6665ZM5.99984 8.6665C3.7907 8.6665 1.99984 6.87564 1.99984 4.6665C1.99984 2.45736 3.7907 0.666504 5.99984 0.666504C8.20897 0.666504 9.99984 2.45736 9.99984 4.6665C9.99984 6.87564 8.20897 8.6665 5.99984 8.6665ZM5.99984 7.33317C7.47257 7.33317 8.6665 6.13926 8.6665 4.6665C8.6665 3.19374 7.47257 1.99984 5.99984 1.99984C4.52708 1.99984 3.33317 3.19374 3.33317 4.6665C3.33317 6.13926 4.52708 7.33317 5.99984 7.33317Z"/>
+          </svg>
+        </article>
         <h3 class="menu__button-title">Sign in</h3>
       </article>
 

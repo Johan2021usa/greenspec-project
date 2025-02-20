@@ -64,12 +64,14 @@
   align-items: center;
 }
 .navbar__toggle-container{
+  padding: 0;
   display: flex;
   justify-content: space-between;
   width: 4.125rem;
   border:0.8px solid var(--border-clr);
   border-radius: 50px;
   cursor: pointer;
+  background-color: transparent;
 }
 .navbar__toggle-button{
   display: flex;
@@ -168,6 +170,7 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
+    border: none;
     height: 2rem;
     gap: 4px;
     padding: 0 8px;
@@ -175,7 +178,7 @@
     cursor: pointer;
     border-radius: 60px;
     transition: all 200ms ease-in-out;
-    /* border: 1px solid red; */
+    background-color: transparent;
   }
   .pages__option:hover{
     background-color: var(--active-menu-clr);
