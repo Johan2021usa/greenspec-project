@@ -12,7 +12,7 @@
   z-index: -1;
   position: absolute;
   display: flex;
-  align-items: flex-end; /* Changed to flex-end for consistency with your original CSS */
+  align-items: flex-end;
   top: 8.25rem;
   width: 100%;
   height: 21.6875rem; /* 347px / 16px = 21.6875rem */
@@ -82,17 +82,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   width: 6.62rem;
-  height: 32px;
+  height: 2rem;
   border-radius: 3.75rem;
   background-color: var(--back-ground);
   border: 1px solid var(--border-clr);
+  box-sizing: border-box;
+}
+.header__filter-icon-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+}
+.header__filter-icon{
+  width: 0.6875rem;
+  height: 0.6875rem;
+  fill: none;
+}
+.header__filter-icon path{
+  fill: var(--icon-fill-clr);
 }
 .header__filter-name{
+  margin: 0;
   font-family: var(--geist-family);
   font-weight: 400;
   font-size: 0.875rem;
   color: var(--lang-fonts-clr);
+}
+.header__arrow-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+}
+.header__arrow{
+  position: absolute;
+  width: 0.353rem;
+  height: 0.235rem;
+  fill: none;
+}
+.header__arrow path{
+  fill: var(--icon--fill-clr-2);
 }
 
 @media screen and (min-width: 1120px) {

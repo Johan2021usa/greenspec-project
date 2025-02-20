@@ -133,6 +133,7 @@
 
   /* Desktop configuration*/
   .navbar{
+    position: relative;
     display: flex;
     justify-content: center;
   }
@@ -156,6 +157,7 @@
     height: 1.693rem;
   }
   .pages{
+    position: relative;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -197,8 +199,8 @@
     /* display: none; */
     width: 0;
     height: 0;
-    left: 38.2rem;
-    top: 3.9rem;
+    left: 15.5rem;
+    top: 2.5rem;
     opacity: 0;
     transition: all 200ms ease-in-out allow-discrete;
     &.--active-d{
@@ -216,7 +218,7 @@
     }
   }
   .--alt-position-k{
-    left: 45.5rem;
+    left: 23.2rem;
   }
   .--active-d-k{
     position: absolute;

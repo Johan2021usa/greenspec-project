@@ -140,6 +140,10 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--border-clr", "var(--Dgray-200)");
     this.rootStyles.setProperty("--arrow-clr", "var(--Dgray-900)");
     this.rootStyles.setProperty("--menu-bt-clr","var(--Dgreen-900)");
+
+    this.rootStyles.setProperty("--icon-bg-clr","var(--Dgray-50)");
+    this.rootStyles.setProperty("--icon-fill-clr","var(--Dgray-700)");
+    this.rootStyles.setProperty("--icon--fill-clr-2","var(--Dgray-800)");
   }
 
   setLightTheme():void{
@@ -157,6 +161,10 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--border-clr", "var(--gray-200)");
     this.rootStyles.setProperty("--arrow-clr", "var(--gray-900)");
     this.rootStyles.setProperty("--menu-bt-clr","var(--green-900)");
+
+    this.rootStyles.setProperty("--icon-bg-clr","var(--gray-50)");
+    this.rootStyles.setProperty("--icon-fill-clr","var(--gray-700)");
+    this.rootStyles.setProperty("--icon--fill-clr-2","var(--gray-800)");
   }
 
   toggleProductsDesk():void{

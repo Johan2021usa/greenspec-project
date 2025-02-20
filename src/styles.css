@@ -81,8 +81,7 @@
   /*Gallery/ icons */
   --icon-bg-clr: var(--gray-50);
   --icon-fill-clr: var(--gray-700);
-
-
+  --icon--fill-clr-2: var(--gray-800);
 
 }
 
