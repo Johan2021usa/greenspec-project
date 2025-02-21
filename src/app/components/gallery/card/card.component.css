@@ -82,6 +82,7 @@
   background-color: transparent;
   box-sizing: border-box;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
 }
 .--primary{
   background-color: var(--green-500);
@@ -114,7 +115,30 @@
 /* Desktop */
 @media screen and (min-width:1120px) {
   .card{
-    height: 18.37rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 18.40rem;
+    max-height: 21.37rem;
     width: 16.40rem;
+    row-gap: 0.5rem;
+    box-sizing: border-box;
   }
+  .card__header{
+    display: flex;
+    width: 15.43rem;
+    height: 9.5rem;
+  }
+  .card__img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  /* .card:hover{
+    height: 342px;
+  }
+  .card:hover .card__header{
+    width: auto;
+    height: 12.5rem;
+  } */
 }

@@ -7,6 +7,7 @@
   align-items: center;
   min-height: 30rem;
   box-sizing: border-box !important;
+  /* border: 1px solid red; */
 }
 .gallery__3d-container {
   z-index: -1;
@@ -192,6 +193,7 @@ app-card{
     display: flex;
     flex-direction: column;
     width: 70.25rem;
+    /* border: 1px solid red; */
   }
   .header{
     display: flex;
