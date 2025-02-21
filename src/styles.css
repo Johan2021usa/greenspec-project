@@ -20,21 +20,6 @@
   --gray-800: #7D7D7D;
   --gray-900: #171717;
 
-  /* Gray light variables */
-  --green-50: #ECFDF6;
-  --green-100: #E6FCF1;
-  --green-200: #D2FAED;
-  --green-300: #B9F5DF;
-  --green-400: #82EC88;
-  --green-500: #48E195;
-  --green-600: #28A980;
-  --green-700: #269154;
-  --green-800: #0F7E54;
-  --green-900: #00391F;
-
-  /* Font family */
-  --geist-family : "Geist", serif;
-
   /* Gray dark variables */
   --Dgray-50: #1A1A1A;
   --Dgray-100: #1F1F1F;
@@ -46,6 +31,18 @@
   --Dgray-700: #A7A7A7;
   --Dgray-800: #E6E6E6;
   --Dgray-900: #EDEDED;
+
+  /* green light variables */
+  --green-50: #ECFDF6;
+  --green-100: #E6FCF1;
+  --green-200: #D2FAED;
+  --green-300: #B9F5DF;
+  --green-400: #82EC88;
+  --green-500: #48E195;
+  --green-600: #28A980;
+  --green-700: #269154;
+  --green-800: #0F7E54;
+  --green-900: #00391F;
 
   /* Green dark variables */
   --Dgreen-50: #002616;
@@ -59,7 +56,35 @@
   --Dgreen-800: #00CA9E;
   --Dgreen-900: #D8FFF3;
 
+  /* Blue light */
+  --blue-50: #F0F7FF;
+  --blue-100: #E9F4FF;
+  --blue-200: #DFF0FF;
+  --blue-300: #CBE7FF;
+  --blue-400: #94CDFF;
+  --blue-500: #49AEFF;
+  --blue-600: #006BFF;
+  --blue-700: #0059ED;
+  --blue-800: #0B55CB;
+  --blue-900: #002358;
+
+  /* Blue dark */
+  --Dblue-50: #06193A;
+  --Dblue-100: #022249;
+  --Dblue-200: #012F61;
+  --Dblue-300: #003674;
+  --Dblue-400: #004180;
+  --Dblue-500: #008FFF;
+  --Dblue-600: #006FFE;
+  --Dblue-700: #005BE7;
+  --Dblue-800: #47A8FF;
+  --Dblue-900: #EBF6FF;
+
+
+
   /* variables them */
+  /* Font family */
+  --geist-family : "Geist", serif;
   /* NAVBAR-Fonts */
   --back-ground: var(--white);
   --lang-fonts-clr: var(--gray-700); /* Toggle fonts color */
@@ -82,7 +107,10 @@
   --icon-bg-clr: var(--gray-50);
   --icon-fill-clr: var(--gray-700);
   --icon--fill-clr-2: var(--gray-800);
-
+  /* Cards */
+  --bg-clr-cat: var(--blue-50);
+  --brd-clr-cat: var(--blue-600);
+  --bg-clr-cat-icon: var(--blue-500);
 }
 
 body{
