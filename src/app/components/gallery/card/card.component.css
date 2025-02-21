@@ -145,7 +145,7 @@
     border-radius: 0.5rem;
   }
   .card:hover{
-    height: 342px;
+    height: 21.13rem; /*342px*/
     width: 16.40rem;
   }
   .card:hover .card__header{
