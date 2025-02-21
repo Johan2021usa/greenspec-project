@@ -6,7 +6,7 @@ import { CardComponent } from "./card/card.component";
   standalone: true,
   imports: [CardComponent],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.css'
+  styleUrls: ['./gallery.component.css', './desktop-css/gallery.desk.component.css']
 })
 export class GalleryComponent{
 

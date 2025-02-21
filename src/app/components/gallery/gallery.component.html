@@ -1,25 +1,25 @@
-<section class="gallery">
+<section class="gallery --flex ">
   <!-- Background -->
-  <article class="gallery__3d-container">
+  <article class="gallery__3d-container --flex">
     <img src="assets/vectors/3d-lines.png" alt="vectors-image" class="gallery__3d-vector">
   </article>
   <svg class="gallery__bg-gradient">
     <ellipse opacity="0.4" cx="757" cy="206" rx="1440" ry="206" fill="url(#paint0_radial_166_1762)"/>
-    <defs>
-    <radialGradient id="paint0_radial_166_1762" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(757 206) rotate(90) scale(206 1440)">
-    <stop stop-color="#4BE196"/>
-    <stop offset="0.895" stop-color="#4BE196" stop-opacity="0"/>
+      <defs>
+      <radialGradient id="paint0_radial_166_1762" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(757 206) rotate(90) scale(206 1440)">
+      <stop stop-color="#4BE196"/>
+      <stop offset="0.895" stop-color="#4BE196" stop-opacity="0"/>
     </radialGradient>
     </defs>
   </svg>
 
   <!-- Content -->
-  <section class="gallery__container">
+  <section class="gallery__container --flex">
 
-    <section class="header">
+    <section class="header --flex">
 
-      <article class="header__group">
-        <section class="header__icon-cont">
+      <article class="header__group --flex">
+        <section class="header__icon-cont --flex">
           <svg class="header__icon">
             <path d="M14 18V2H2V17C2 17.5523 2.44772 18 3 18H14ZM17 20H3C1.34315 20 0 18.6569 0 17V1C0 0.44772 0.44772 0 1 0H15C15.5523 0 16 0.44772 16 1V8H20V17C20 18.6569 18.6569 20 17 20ZM16 10V17C16 17.5523 16.4477 18 17 18C17.5523 18 18 17.5523 18 17V10H16ZM4 4H10V10H4V4ZM6 6V8H8V6H6ZM4 11H12V13H4V11ZM4 14H12V16H4V14Z"/>
           </svg>
@@ -27,14 +27,14 @@
         <h3 class="header__title">Latest Innovation & Insights</h3>
       </article>
 
-      <button class="header__filter-cont">
-        <article class="header__filter-icon-cont">
+      <button class="header__filter-cont --flex">
+        <article class="header__filter-icon-cont --flex">
           <svg class="header__filter-icon">
             <path d="M10.37 0V1.15222H9.79389L6.91333 5.47306V10.37H3.45667V5.47306L0.576111 1.15222H0V0H10.37ZM1.96091 1.15222L4.60889 5.12416V9.21778H5.76111V5.12416L8.40909 1.15222H1.96091Z"/>
           </svg>
         </article>
         <p class="header__filter-name">Today</p>
-        <article class="header__arrow-cont">
+        <article class="header__arrow-cont --flex">
           <svg class="header__arrow">
             <path d="M2.99984 4.00024L0.171387 1.17184L1.1142 0.229004L2.99984 2.11464L4.88544 0.229004L5.82824 1.17184L2.99984 4.00024Z"/>
           </svg>
@@ -42,14 +42,14 @@
       </button>
     </section>
 
-    <section #wrapperGallery class="gallery__sub-cont">
+    <section #wrapperGallery class="gallery__sub-cont --flex">
       @for(info of cardsInfo; track info){
         <app-card [info]="info"></app-card>
       }
     </section>
 
     <!-- Arrow Right -->
-    <button class="arrow-slider"
+    <button class="arrow-slider --flex"
     (click)="scrollImage(true)">
       <svg class="arrow-slider__icon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8.78103 5.33327L5.20503 1.75726L6.14783 0.814453L11.3333 5.99993L6.14783 11.1853L5.20503 10.2425L8.78103 6.6666H0.666626V5.33327H8.78103Z"/>
@@ -57,7 +57,7 @@
     </button>
 
     <!-- Arrow Left -->
-    <button class="arrow-slider --left-arrow"
+    <button class="arrow-slider --flex --left-arrow"
     (click)="scrollImage(false)">
       <svg class="arrow-slider__icon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8.78103 5.33327L5.20503 1.75726L6.14783 0.814453L11.3333 5.99993L6.14783 11.1853L5.20503 10.2425L8.78103 6.6666H0.666626V5.33327H8.78103Z"/>

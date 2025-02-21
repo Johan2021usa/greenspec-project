@@ -1,0 +1,53 @@
+/* Desktop version */
+@media screen and (min-width: 1320px) {
+  .gallery {
+    justify-content: flex-start;
+    max-height: 30rem;
+    box-sizing: border-box;
+    padding: 3.62rem 0;
+    box-sizing: border-box;
+  }
+  .gallery__3d-container {
+    top: 9.2rem;
+    bottom: 0;
+    height: 20.6875rem;
+  }
+  .gallery__bg-gradient {
+    height: 25.75rem;
+    top: 2.12rem;
+    box-sizing: border-box;
+  }
+  .gallery__container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 70.25rem;
+    row-gap: 1.5rem;
+    height: 22.75rem;
+  }
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.5rem;
+  }
+  .gallery__sub-cont {
+    justify-content: left;
+    padding: 0;
+    max-width: 70.25rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    box-sizing: border-box;
+  }
+
+  /*Arrow styles */
+  .arrow-slider {
+    top: 12.125rem;
+    right: -4rem;
+  }
+  .--left-arrow {
+    left: -4rem;
+  }
+}
