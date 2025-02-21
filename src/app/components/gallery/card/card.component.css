@@ -115,6 +115,8 @@
 /* Desktop */
 @media screen and (min-width:1120px) {
   .card{
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     min-height: 18.40rem;
@@ -122,11 +124,19 @@
     width: 16.40rem;
     row-gap: 0.5rem;
     box-sizing: border-box;
+    cursor: pointer;
+    transition:
+      all 350ms ease-in-out allow-discrete
+      /* height 300ms ease-in-out, */
+      /* width 300ms ease-in-out */
+    ;
   }
   .card__header{
     display: flex;
     width: 15.43rem;
     height: 9.5rem;
+    flex: 1;
+    box-sizing: border-box;
   }
   .card__img{
     width: 100%;
@@ -134,11 +144,31 @@
     object-fit: cover;
     border-radius: 0.5rem;
   }
-  /* .card:hover{
+  .card:hover{
     height: 342px;
+    width: 16.40rem;
   }
   .card:hover .card__header{
-    width: auto;
     height: 12.5rem;
-  } */
+    width: 15.43rem;
+  }
+  .card:hover .card__header img{
+    animation: blur 250ms both 150ms ease-in-out;
+  }
+  @keyframes blur {
+
+    0%{
+      filter: blur(0);
+    }
+    20%{
+      filter: blur(0.05);
+    }
+    50%{
+      filter: blur(0.1rem);
+    }
+    60%{
+      filter: blur(0.08);
+    }
+
+  }
 }

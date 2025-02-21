@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   padding: 2rem;
   align-items: center;
   min-height: 30rem;
@@ -156,43 +156,28 @@
 app-card{
   margin: 0;
 }
-/*Arrow styles */
 .arrow-slider{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  width: 3rem;
-  top: 12.125rem;
-  right: -4rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: var(--back-ground);
-  border: 1px solid var(--border-clr);
-  transition: all 200ms ease-in-out;
+  display: none;
 }
-.arrow-slider:hover{
-  background-color: var(--green-50);
-  border: 1px solid var(--green-200);
-}
-.arrow-slider:active{
-  background-color: var(--green-200);
-  border: 1px solid var(--green-200);
-}
-.arrow-slider__icon{
-  height: 0.648rem;
-  width: 0.666rem;
-}
+
 /* Desktop version */
 @media screen and (min-width: 1120px) {
+  .gallery{
+    padding-top: 3.625rem;
+    max-height: 30rem;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+  }
   .gallery__3d-container{
     bottom: 0;
+    /* border: 1px solid red; */
   }
   .gallery__container {
     display: flex;
     flex-direction: column;
     width: 70.25rem;
+    row-gap: 1.5rem;
+    height: 22.75rem;
     /* border: 1px solid red; */
   }
   .header{
@@ -201,7 +186,38 @@ app-card{
     justify-content: space-between;
     align-items: center;
     min-height: 2.5rem;
+    /* border: 1px solid red; */
   }
+
+  /*Arrow styles */
+  .arrow-slider{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    top: 12.125rem;
+    right: -4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: var(--back-ground);
+    border: 1px solid var(--border-clr);
+    transition: all 200ms ease-in-out;
+  }
+  .arrow-slider:hover{
+    background-color: var(--green-50);
+    border: 1px solid var(--green-200);
+  }
+  .arrow-slider:active{
+    background-color: var(--green-200);
+    border: 1px solid var(--green-200);
+  }
+  .arrow-slider__icon{
+    height: 0.648rem;
+    width: 0.666rem;
+  }
+
 }
 
 
