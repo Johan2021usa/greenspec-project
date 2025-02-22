@@ -36,10 +36,10 @@
 }
 
 .insights__card-cont {
-  width: 39.19rem;
+  width: 250px;
   min-height: 7.25rem;
-  padding: 10px 0;
-  row-gap: 10px;
+  padding: 20px 0;
+  row-gap: 20px;
   background-color: #FFFFFF1A;
   border-radius: 1.75rem;
   backdrop-filter: blur(15px);
@@ -78,7 +78,7 @@
 
 @media screen and (min-width: 1127px) {
   .insights__card-cont {
-    /* width: 39.19rem; */
+    width: 39.19rem;
     gap: 4.5rem;
   }
 }
