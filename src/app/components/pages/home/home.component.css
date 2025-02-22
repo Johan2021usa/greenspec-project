@@ -1,6 +1,12 @@
-.home{
+.home {
   display: flex;
   flex-direction: column;
   row-gap: 48px;
   box-sizing: border-box;
+}
+app-info-board {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+
 }

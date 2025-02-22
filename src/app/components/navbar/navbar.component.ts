@@ -144,6 +144,10 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--icon-bg-clr","var(--Dgray-50)");
     this.rootStyles.setProperty("--icon-fill-clr","var(--Dgray-700)");
     this.rootStyles.setProperty("--icon--fill-clr-2","var(--Dgray-800)");
+
+    this.rootStyles.setProperty("--bg-info-board","var(--Dgreen-700)");
+
+
   }
 
   setLightTheme():void{
@@ -165,6 +169,8 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--icon-bg-clr","var(--gray-50)");
     this.rootStyles.setProperty("--icon-fill-clr","var(--gray-700)");
     this.rootStyles.setProperty("--icon--fill-clr-2","var(--gray-800)");
+
+    this.rootStyles.setProperty("--bg-info-board","var(--green-700)");
   }
 
   toggleProductsDesk():void{

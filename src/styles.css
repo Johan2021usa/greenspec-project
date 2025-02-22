@@ -37,11 +37,11 @@
   --green-100: #E6FCF1;
   --green-200: #D2FAED;
   --green-300: #B9F5DF;
-  --green-400: #82EC88;
+  --green-400: #82ECBB;
   --green-500: #48E195;
   --green-600: #28A980;
-  --green-700: #269154;
-  --green-800: #0F7E54;
+  --green-700: #26916A;
+  --green-800: #0F7E64;
   --green-900: #00391F;
 
   /* Green dark variables */
@@ -80,8 +80,6 @@
   --Dblue-800: #47A8FF;
   --Dblue-900: #EBF6FF;
 
-
-
   /* variables them */
   /* Font family */
   --geist-family : "Geist", serif;
@@ -111,6 +109,8 @@
   --bg-clr-cat: var(--blue-50);
   --brd-clr-cat: var(--blue-600);
   --bg-clr-cat-icon: var(--blue-500);
+  /* info-board */
+  --bg-info-board: var(--green-700);
 
 }
 
