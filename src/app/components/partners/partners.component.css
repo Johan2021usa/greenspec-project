@@ -1,0 +1,126 @@
+/* Modifiers */
+.--flex {
+  display: flex;
+}
+.--jc-center {
+  justify-content: center;
+}
+.--ii-center {
+  align-items: center;
+}
+.--jc-s-between {
+  justify-content: space-between;
+}
+.--f-wrap {
+  flex-wrap: wrap;
+}
+.--f-wrap-r {
+  flex-wrap: wrap-reverse;
+}
+.--bs-b-box {
+  box-sizing: border-box;
+}
+.--fd-column {
+  flex-direction: column;
+}
+.--absolute {
+  position: absolute;
+}
+.--left {
+  left: 0;
+}
+.--right {
+  right: 0;
+}
+.--of-cover {
+  object-fit: cover;
+}
+.--f-height {
+  height: 100%;
+  width: 100%;
+}
+
+/* partners */
+.partners {
+  position: relative;
+  height: fit-content;
+  /* border: 1px solid red; */
+}
+.partners__circle-bg {
+  z-index: -2;
+}
+.partners__3d-bg {
+  z-index: -1;
+  display: none;
+}
+.partners__container {
+  margin: 1.644rem 2rem;
+  width: 76.375rem;
+  height: fit-content;
+  row-gap: 2rem;
+  /* border: 1px solid blue; */
+}
+.partners__header {
+  height: 2.75rem;
+  gap: 1.18rem;
+  /* border: 1px solid green; */
+}
+.partners__icon-cont {
+  background-color: var(--icon-bg-clr);
+  height: 2.75rem;
+  width: 2.75rem;
+}
+.partners__icon {
+  width: 24px;
+  height: 21px;
+  fill: none;
+}
+.partners__icon path {
+  fill: var(--icon-fill-clr);
+}
+.partners__title {
+  margin: 0;
+  font-family: var(--geist-family);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--menu-title-clr);
+}
+.partners__title span {
+  color: var(--fnt-clr-span-banner);
+}
+.partners__body {
+  width: 70%;
+  height: fit-content;
+  gap: 2rem;
+  /* border: 1px solid green; */
+}
+.partners__brand-icon {
+  padding: 0.5rem;
+  max-height: 5.98rem;
+  max-width: 12.5rem;
+  object-fit: contain;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 1127px) {
+  .partners {
+    height: 18.75rem;
+  }
+  .partners__circle-bg {
+    height: 100%;
+    width: auto;
+  }
+  .partners__3d-bg {
+    display: block;
+  }
+  .partners__container {
+    margin: 1.644rem 2rem 0 2rem;
+    height: 11.728rem;
+  }
+  .partners__body {
+    width: 100%;
+    height: 5.98rem;
+  }
+}
