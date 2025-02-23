@@ -1,5 +1,7 @@
 <nav class="navbar">
 
+
+  {{'navbar.home' | translate}}
   <!-- Icon container/ Mobile version -->
   @if(!helperReturnState){
     <article #iconContainer class="navbar__icon-container">
@@ -95,8 +97,8 @@
       <article class="menu__toggle-lang">
         <img src="assets/vectors/menu__function-icon.png" alt="language-icon" class="menu__toggle-lang-icon">
         <select class="menu__function-selector">
-          <option value="EN" class="menu__selector-option">EN</option>
-          <option value="ES" class="menu__selector-option">ES</option>
+          <option value="EN" class="menu__selector-option" (click)="useLanguage('en')">EN</option>
+          <option value="ES" class="menu__selector-option" (click)="useLanguage('es')">ES</option>
         </select>
       </article>
 
@@ -123,7 +125,7 @@
         </button>
 
         <button class="menu__button --action">
-          <h3 class="menu__button-title --black">Contact us</h3>
+          <h3 class="menu__button-title --black" [routerLink]="['/contact']">Contact us</h3>
         </button>
       </section>
     </article>
@@ -138,8 +140,8 @@
     <article class="menu__toggle-lang">
       <img src="assets/vectors/menu__function-icon.png" alt="language-icon" class="menu__toggle-lang-icon">
       <select class="menu__function-selector">
-        <option value="EN" class="menu__selector-option">EN</option>
-        <option value="ES" class="menu__selector-option">ES</option>
+        <option value="EN" class="menu__selector-option" (click)="toggleLanguage('en')">EN</option>
+        <option value="ES" class="menu__selector-option"(click)="toggleLanguage('es')">ES</option>
       </select>
     </article>
 
@@ -154,7 +156,7 @@
       </article>
 
       <article class="menu__button --action" (click)="returnHelper(true)">
-        <h3 class="menu__button-title --black">Contact us</h3>
+        <h3 class="menu__button-title --black" [routerLink]="['/contact']">Contact us</h3>
       </article>
     </section>
   </article>

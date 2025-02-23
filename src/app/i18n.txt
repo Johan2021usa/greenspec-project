@@ -1,0 +1,1 @@
+npm i @ngx-translate/http-loader @colsen1991/ngx-translate-extract-marker  @ngx-translate/core

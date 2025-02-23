@@ -1,14 +1,59 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import {Router, RouterLink } from '@angular/router';
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import { MultiLangService } from '../../multi-lang.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink],
+  imports:[RouterLink,TranslateModule,CommonModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css', './navbar-css/menu-style.css']
 })
 export class NavbarComponent implements OnInit, AfterViewInit{
+
+multilangService= inject(MultiLangService);
+
+toggleLanguage(language:string):void{
+
+  if(this.multilangService.languageSignal() !==language){
+    this.multilangService.updateLanguage(language);
+    console.log('Language changed to', language);
+    
+  }
+
+}
+
+getLanguegeIconClass(language:string):string{
+
+  switch(language){
+    case 'en':
+      return 'fi fi-us';
+    case 'es':
+      return 'fi fi-es';
+    default:
+        return 'fi fi-us';
+
+  }
+
+}
+
+getLanguageName(language:string):string{
+
+  switch(language){
+    case 'en':
+      return 'English';
+    case 'es':
+      return 'Spanish';
+    default:
+        return 'English';
+
+  }
+
+}
+
   activeBut!:HTMLElement;
   @ViewChild('buttonActive') buttonActive!: ElementRef;
   @ViewChild('buttonActiveDesk') buttonActiveDesk!: ElementRef;
@@ -24,9 +69,13 @@ export class NavbarComponent implements OnInit, AfterViewInit{
   private rootStyles! : CSSStyleDeclaration; // Used to saved CSS styles
   helperReturnState: boolean = false;
 
-  constructor(
-    private router: Router,
-  ){}
+
+
+  constructor(private translate: TranslateService,private router: Router) {
+    this.translate.addLangs(['es', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   ngOnInit(): void {
     if(!localStorage.getItem("darkMode")){
@@ -52,7 +101,9 @@ export class NavbarComponent implements OnInit, AfterViewInit{
       this.setLightTheme(); // Setting themes - light
     }
   }
-
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
   toggleDarkMode(option: number):void{
     if(option===1){
       this.activeBut = this.buttonActive.nativeElement;
