@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ErrorHandler } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../../environments/environment.development';
+
 
 @Component({
   selector: 'app-contact',
@@ -38,10 +40,13 @@ export class ContactComponent {
         contact_reason: formData.contactReason,
         message: formData.message
       };
+       if(!environment.SERVICE_KEY || !environment.TEMPLATE_KEY || !environment.PUBLIC_KEY){
+        throw new Error("Not env variables");
+       }
 
       emailjs
-        .send('service_c2wa1bs', 'template_p9l4wdg', templateParams, {
-          publicKey: 'E_YIPa7pHxNqXZHEf',
+        .send(environment.SERVICE_KEY, environment.TEMPLATE_KEY, templateParams, {
+          publicKey: environment.PUBLIC_KEY,
         })
         .then(
           () => {
