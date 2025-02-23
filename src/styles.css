@@ -90,7 +90,7 @@
   --contact-font-clr: var(--black-alter); /* Contact us font color */
   --menu-title-clr: var(--gray-900); /* Font color menu option*/
   --drop-item-clr: var(--gray-700); /* font color drop option*/
-  --return-arrow-clr: var(var(--green-900));
+  --return-arrow-clr: var(--green-900);
   /* NAVBAR-hovers/borders/arrows */
   --active-menu-clr: var(--gray-100);
   --border-clr: var(--gray-200);
@@ -111,6 +111,7 @@
   --bg-clr-cat-icon: var(--blue-500);
   /* info-board */
   --bg-info-board: var(--green-700);
+  --aside-bg-footer: var(--green-300);
 
 }
 

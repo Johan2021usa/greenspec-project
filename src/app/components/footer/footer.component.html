@@ -1,0 +1,117 @@
+<section class="footer --flex --fd-column --bs-b-box">
+
+  <section class="footer__container --flex --fd-column --bs-b-box">
+    <header class="footer__header --flex --fd-column --ii-center --bs-b-box">
+      <article class="footer__logo-cont">
+        <img src="assets/images/logo-greenspec.png" alt="navbar__icon" class="footer__logo">
+      </article>
+      <h3 class="footer__title">Smart Horticulture Solutions</h3>
+    </header>
+
+    <!-- Dropdowns -->
+    <article class="menu-cont --flex --fd-column">
+
+      <!-- Toggle about us -->
+      <section class="menu__option-sub-container">
+        <article class="menu__option --no-gap" (click)="toggleAboutUs($event)">
+          <section class="menu__option-group">
+            <h3 class="menu__option-title">About us</h3>
+          </section>
+          <svg #arrowAboutUs class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
+        </article>
+        <section #dropAboutUs class="menu__option-drop-container">
+          <article class="menu__drop-item">Company info</article>
+          <article class="menu__drop-item">Mission & Vision</article>
+          <article class="menu__drop-item">Our history</article>
+          <article class="menu__drop-item">Team</article>
+        </section>
+      </section>
+
+      <!-- Toggle solutions -->
+      <section class="menu__option-sub-container">
+        <article class="menu__option --no-gap" (click)="toggleSolutions($event)">
+          <section class="menu__option-group">
+            <h3 class="menu__option-title">Solutions</h3>
+          </section>
+          <svg #arrowSolutions class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
+        </article>
+        <section #dropSolutions class="menu__option-drop-container">
+          <article class="menu__drop-item">Greenspec Climate Control</article>
+          <article class="menu__drop-item">Kanut</article>
+        </section>
+      </section>
+
+      <!-- Toggle products -->
+      <section class="menu__option-sub-container">
+        <article class="menu__option --no-gap" (click)="toggleProductsMenu($event)">
+          <section class="menu__option-group">
+            <h3 class="menu__option-title">Our products</h3>
+          </section>
+          <svg #arrowProducts class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
+        </article>
+        <section #dropProducts class="menu__option-drop-container">
+          <article class="menu__drop-item">Soil sensors</article>
+          <article class="menu__drop-item">Climate sensors</article>
+          <article class="menu__drop-item">loT sensors</article>
+          <article class="menu__drop-item">Water sensors</article>
+          <article class="menu__drop-item">Hardware</article>
+        </section>
+      </section>
+
+      <!-- Toggle Knowledge Hub -->
+      <section class="menu__option-sub-container">
+        <article class="menu__option --no-gap" (click)="toggleKnowledgeMenu($event)">
+          <section class="menu__option-group">
+          <h3 class="menu__option-title">Knowledge hub</h3>
+          </section>
+          <svg #arrowKnowledge class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z" fill="#171717"/>
+          </svg>
+        </article>
+        <section #dropKnowledge class="menu__option-drop-container">
+          <article class="menu__drop-item">News</article>
+          <article class="menu__drop-item">Manual guides</article>
+          <article class="menu__drop-item">Case studies</article>
+         </section>
+      </section>
+
+      <!-- Toggle Contact us -->
+      <section class="menu__option-sub-container">
+        <article class="menu__option --no-gap" (click)="toggleContact($event)">
+          <section class="menu__option-group">
+          <h3 class="menu__option-title">Contact us</h3>
+          </section>
+          <svg #arrowContact class="menu__option-row" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="menu__option-row" d="M4.99976 6.0006L0.75708 1.758L2.1713 0.34375L4.99976 3.1722L7.82816 0.34375L9.24236 1.758L4.99976 6.0006Z"/>
+          </svg>
+        </article>
+        <section #dropContact class="menu__option-drop-container">
+          <article class="menu__drop-item">Forms</article>
+          <article class="menu__drop-item">LinkedIn</article>
+          <article class="menu__drop-item">Youtube</article>
+          <article class="menu__drop-item">Instagram</article>
+          <article class="menu__drop-item">information&#64;greenspec.nl</article>
+          <article class="menu__drop-item">(+31) 627 479925</article>
+         </section>
+      </section>
+
+    </article>
+  </section>
+
+  <!-- Aside container -->
+  <aside class="footer__aside-info-cont --flex --fd-column --ii-center --bs-b-box">
+    <p class="footer__privacy-text --font-style">2025 Greenspec - All rights reserved</p>
+    <section class="footer__privacy-options-cont --flex">
+      <p class="footer_privacy-opt --font-style">Terms and conditions</p>
+      <p class="footer_privacy-opt --font-style">Privacy policy</p>
+      <p class="footer_privacy-opt --font-style">All cookies</p>
+    </section>
+  </aside>
+
+</section>
