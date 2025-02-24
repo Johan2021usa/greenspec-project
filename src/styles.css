@@ -114,6 +114,8 @@
   --aside-bg-footer: var(--green-300);
   /* Contact */
   --bread-font: var(--gray-600);
+  --aside-fnt-clr-01: var(--green-50);
+  --aside-fnt-clr-02: var(--green-400);
 }
 
 body{
