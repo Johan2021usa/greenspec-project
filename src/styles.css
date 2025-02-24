@@ -112,7 +112,8 @@
   /* info-board */
   --bg-info-board: var(--green-700);
   --aside-bg-footer: var(--green-300);
-
+  /* Contact */
+  --bread-font: var(--gray-600);
 }
 
 body{

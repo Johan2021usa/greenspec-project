@@ -132,7 +132,6 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--back-ground", "var(--black)");
     this.rootStyles.setProperty("--lang-fonts-clr", "var(--Dgray-700)");
     this.rootStyles.setProperty("--sign-in-clr", "var(--Dgreen-900)");
-    this.rootStyles.setProperty("--contact-font-clr", "var(--Dblack-alter)");
     this.rootStyles.setProperty("--menu-title-clr", "var(--Dgray-900)");
     this.rootStyles.setProperty("--drop-item-clr", "var(--Dgray-700)");
     this.rootStyles.setProperty("--return-arrow-clr","var(--Dgreen-900)");
@@ -149,7 +148,7 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--bg-info-board","var(--Dgreen-700)");
 
     this.rootStyles.setProperty("--aside-bg-footer","var(--Dgreen-300)");
-
+    this.rootStyles.setProperty("--bread-font","var(--Dgray-600)");
 
   }
 
@@ -159,7 +158,6 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--back-ground", "var(--white)");
     this.rootStyles.setProperty("--lang-fonts-clr", "var(--gray-700)");
     this.rootStyles.setProperty("--sign-in-clr", "var(--green-900)");
-    this.rootStyles.setProperty("--contact-font-clr", "var(--black-alter)");
     this.rootStyles.setProperty("--menu-title-clr", "var(--gray-900)");
     this.rootStyles.setProperty("--drop-item-clr", "var(--gray-700)");
     this.rootStyles.setProperty("--return-arrow-clr","var(--green-900)");
@@ -175,6 +173,7 @@ export class NavbarComponent implements OnInit, AfterViewInit{
 
     this.rootStyles.setProperty("--bg-info-board","var(--green-700)");
     this.rootStyles.setProperty("--aside-bg-footer","var(--green-300)");
+    this.rootStyles.setProperty("--bread-font","var(--gray-600)");
   }
 
   toggleProductsDesk():void{
