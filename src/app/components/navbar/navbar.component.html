@@ -122,7 +122,7 @@
           <h3 class="menu__button-title">Sign in</h3>
         </button>
 
-        <button class="menu__button --action">
+        <button class="menu__button --action" [routerLink]="['/contact']" routerLinkActive="router-link-active">
           <h3 class="menu__button-title --black">Contact us</h3>
         </button>
       </section>
@@ -153,7 +153,7 @@
         <h3 class="menu__button-title">Sign in</h3>
       </article>
 
-      <article class="menu__button --action" (click)="returnHelper(true)">
+      <article class="menu__button --action" (click)="returnHelper(true)" [routerLink]="['/contact']" routerLinkActive="router-link-active">
         <h3 class="menu__button-title --black">Contact us</h3>
       </article>
     </section>

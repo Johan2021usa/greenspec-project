@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -33,6 +33,7 @@ export class NavbarComponent implements OnInit, AfterViewInit{
       localStorage.setItem("darkMode", "false");
     }
   }
+
 
   ngAfterViewInit(): void {
     const activeBut:HTMLElement = this.buttonActive.nativeElement;
