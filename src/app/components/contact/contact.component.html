@@ -19,67 +19,83 @@
       <p class="contact__header-description --m-0 --f-wrap">Have questions? Need support? Get in touch with us and our team will be happy to assist you.</p>
     </header>
 
+
     <!-- Form Structure -->
     <section class="contact__form-cont --flex --f-wrap-r --jc-center --bs-b-box">
 
-      <form class="contact__form --bs-b-box " [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
-        <!-- name field -->
-        <div class="form__group --flex --fd-column">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            formControlName="name"
-            placeholder="Name"
-            required
-          />
-          <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
-            Name is required.
+      <section class="contact__form-sub-cont --flex --fd-column --bs-b-box">
+
+        <header class="contact__form-header">
+          <h3 class="contact__form-title --m-0">Please fill in the form</h3>
+          <p class="contact__form-description --m-0">Let us know how we can help you. Fill in your details, and we'll get back to you as soon as possible.</p>
+        </header>
+
+
+        <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+          <section class="contact__form-header">
+
+          </section>
+
+          <!-- name field -->
+          <div class="form__group --flex --fd-column">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              placeholder="Name"
+              required
+            />
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
+              Name is required.
+            </div>
           </div>
-        </div>
 
-        <div class="form__group --flex --fd-column">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            formControlName="email"
-            placeholder="Email"
-            required />
-          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
-            Valid email is required.
+          <div class="form__group --flex --fd-column">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              placeholder="Email"
+              required />
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+              Valid email is required.
+            </div>
           </div>
-        </div>
 
-        <div class="form__group --flex --fd-column">
-          <label for="contactReason">Contact Reason</label>
-          <select id="contactReason" formControlName="contactReason" required>
-            <option value="Sales Inquiry">Sales Inquiry</option>
-            <option value="Technical Support">Technical Support</option>
-            <option value="Partnership Opportunities">Partnership Opportunities</option>
-            <option value="Other">Other</option>
-          </select>
-          <div *ngIf="contactForm.get('contactReason')?.invalid && contactForm.get('contactReason')?.touched" class="error">
-            Please select a contact reason.
+          <div class="form__group --flex --fd-column">
+            <label for="contactReason">Contact Reason</label>
+            <select id="contactReason" formControlName="contactReason" required>
+              <option value="Sales Inquiry">Sales Inquiry</option>
+              <option value="Technical Support">Technical Support</option>
+              <option value="Partnership Opportunities">Partnership Opportunities</option>
+              <option value="Other">Other</option>
+            </select>
+            <div *ngIf="contactForm.get('contactReason')?.invalid && contactForm.get('contactReason')?.touched" class="error">
+              Please select a contact reason.
+            </div>
           </div>
-        </div>
 
-        <div class="form__group --flex --fd-column">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            formControlName="message"
-            placeholder="Message"
-            required></textarea>
-          <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
-            Message is required.
+          <div class="form__group --flex --fd-column">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              formControlName="message"
+              placeholder="Message"
+              required></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+              Message is required.
+            </div>
           </div>
-        </div>
 
-        <button type="submit" [disabled]="contactForm.invalid">Send</button>
+          <button type="submit" [disabled]="contactForm.invalid">Send</button>
 
-      </form>
+        </form>
+      </section>
+
       <img class="contact__form-img" src="assets/images/form-img.png" alt="pc-form-image">
     </section>
 
