@@ -8,7 +8,7 @@
         <path d="M2.61439 3.50033L0.72876 1.61469L1.67159 0.671875L4.49999 3.50033L1.67159 6.32873L0.72876 5.38593L2.61439 3.50033Z"/>
       </svg>
     </article>
-    <p class="contact__breadcrumb-text --m-0 --primary">Contact us</p>
+    <p class="contact__breadcrumb-text --m-0 --strong-clr">Contact us</p>
   </article>
 
   <section class="contact__group-cont --flex --fd-column --ii-center">
@@ -32,41 +32,50 @@
         </header>
 
 
-        <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-
-          <section class="contact__form-header">
-
-          </section>
+        <form class="form --flex --f-wrap --bs-b-box" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
           <!-- name field -->
-          <div class="form__group --flex --fd-column">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              formControlName="name"
-              placeholder="Name"
-              required
-            />
+          <div class="form__group --flex --fd-column --w-custom --bs-b-box ">
+            <label class="form__group-label" for="name">Name</label>
+
+              <svg class="form__group-input-icon" viewBox="0 0 12 15" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3332 14.6665H9.99984V13.3332C9.99984 12.2286 9.10444 11.3332 7.99984 11.3332H3.99984C2.89527 11.3332 1.99984 12.2286 1.99984 13.3332V14.6665H0.666504V13.3332C0.666504 11.4922 2.15889 9.99984 3.99984 9.99984H7.99984C9.84077 9.99984 11.3332 11.4922 11.3332 13.3332V14.6665ZM5.99984 8.6665C3.7907 8.6665 1.99984 6.87564 1.99984 4.6665C1.99984 2.45736 3.7907 0.666504 5.99984 0.666504C8.20897 0.666504 9.99984 2.45736 9.99984 4.6665C9.99984 6.87564 8.20897 8.6665 5.99984 8.6665ZM5.99984 7.33317C7.47257 7.33317 8.6665 6.13926 8.6665 4.6665C8.6665 3.19374 7.47257 1.99984 5.99984 1.99984C4.52708 1.99984 3.33317 3.19374 3.33317 4.6665C3.33317 6.13926 4.52708 7.33317 5.99984 7.33317Z"/>
+              </svg>
+
+              <input class="form__group-input --bs-b-box"
+                type="text"
+                id="name"
+                formControlName="name"
+                placeholder="Insert"
+                required
+              />
+
             <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
               Name is required.
             </div>
           </div>
 
-          <div class="form__group --flex --fd-column">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              formControlName="email"
-              placeholder="Email"
-              required />
-            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
-              Valid email is required.
-            </div>
+          <!-- email  -->
+          <div class="form__group --flex --fd-column --bs-b-box --w-custom">
+            <label class="form__group-label" for="email">Email</label>
+              <svg class="form__group-input-icon" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.50016 2H14.5002C14.8684 2 15.1668 2.29848 15.1668 2.66667V13.3333C15.1668 13.7015 14.8684 14 14.5002 14H2.50016C2.13198 14 1.8335 13.7015 1.8335 13.3333V2.66667C1.8335 2.29848 2.13198 2 2.50016 2ZM13.8335 4.82528L8.54803 9.55867L3.16683 4.81063V12.6667H13.8335V4.82528ZM3.5078 3.33333L8.54143 7.77467L13.5008 3.33333H3.5078Z"/>
+              </svg>
+
+              <input class="form__group-input --bs-b-box"
+                type="email"
+                id="email"
+                formControlName="email"
+                placeholder="Insert"
+                required />
+
+              <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+                Valid email is required.
+              </div>
           </div>
 
-          <div class="form__group --flex --fd-column">
+          <!-- Drop down -->
+          <div class="form__group --flex --fd-column --bs-b-box">
             <label for="contactReason">Contact Reason</label>
             <select id="contactReason" formControlName="contactReason" required>
               <option value="Sales Inquiry">Sales Inquiry</option>
@@ -79,19 +88,22 @@
             </div>
           </div>
 
-          <div class="form__group --flex --fd-column">
-            <label for="message">Message</label>
+          <!-- Message -->
+          <div class="form__group --flex --fd-column --bs-b-box">
+            <label class="form__group-label" for="name">Message</label>
             <textarea
+              class="form__group-input --text-area --bs-b-box --h-custom"
               id="message"
               formControlName="message"
-              placeholder="Message"
-              required></textarea>
+              placeholder="Insert"
+              required>
+            </textarea>
             <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
               Message is required.
             </div>
           </div>
 
-          <button type="submit" [disabled]="contactForm.invalid">Send</button>
+          <button class="form__button --primary" type="submit" [disabled]="contactForm.invalid">Send</button>
 
         </form>
       </section>

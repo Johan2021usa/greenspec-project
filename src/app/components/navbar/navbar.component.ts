@@ -151,6 +151,7 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--bread-font","var(--Dgray-600)");
     this.rootStyles.setProperty("--aside-fnt-clr-01","var(--Dgreen-50)");
     this.rootStyles.setProperty("--aside-fnt-clr-02","var(--Dgreen-400)");
+    this.rootStyles.setProperty("--border-focus-clr","var(--Dgray-500)");
 
   }
 
@@ -178,6 +179,7 @@ export class NavbarComponent implements OnInit, AfterViewInit{
     this.rootStyles.setProperty("--bread-font","var(--gray-600)");
     this.rootStyles.setProperty("--aside-fnt-clr-01","var(--green-50)");
     this.rootStyles.setProperty("--aside-fnt-clr-02","var(--green-400)");
+    this.rootStyles.setProperty("--border-focus-clr","var(--gray-500)");
   }
 
   toggleProductsDesk():void{
