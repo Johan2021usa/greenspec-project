@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment.development';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./form-styles/form-styles.css', './contact.component.css']
 })
 export class ContactComponent {
 
