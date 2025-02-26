@@ -45,17 +45,20 @@ export class ContactComponent {
        }
 
       emailjs
-        .send(environment.SERVICE_KEY, environment.TEMPLATE_KEY, templateParams, {
-          publicKey: environment.PUBLIC_KEY,
-        })
+        .send(
+          environment.SERVICE_KEY,
+          environment.TEMPLATE_KEY,
+          templateParams,
+          {
+            publicKey: environment.PUBLIC_KEY,
+          }
+        )
         .then(
           () => {
             console.log('SUCCESS!');
-
           },
           (error:any) => {
             console.log('FAILED...', (error as EmailJSResponseStatus).text);
-
           }
         );
     } else {

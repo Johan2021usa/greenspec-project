@@ -92,6 +92,8 @@
 .--select {
   padding: 0 0.625rem;
 }
+
+/* Button -----------------*/
 .form__button {
   padding: 0.625rem 0.75rem;
   width: 5.25rem;
@@ -100,6 +102,12 @@
   border-radius: 0.375rem;
   cursor: pointer;
   color: var(--contact-font-clr);
+  &:is(:disabled, :disabled:hover) { /* If is disabled and disabled with hover*/
+    background-color: var(--icon-bg-clr);
+    color: var(--bread-font);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
 }
 .--primary{
   background-color: var(--bg-button-banner);
