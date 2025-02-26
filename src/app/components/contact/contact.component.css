@@ -141,7 +141,7 @@
 @media screen and (min-width: 1127px) {
   /* Contact form */
   .contact {
-    height: 51.31rem;
+    min-height: 51.31rem;
     padding: 1.5rem;
     row-gap: 1.5rem;
   }
@@ -152,18 +152,19 @@
   /* contact Group */
   .contact__group-cont {
     width: 70.18rem;
-    height: 47.25rem;
+    min-height: fit-content;
   }
   .contact__header-cont {
     width: 29.125rem;
     height: 6rem;
   }
   .contact__form-cont {
+    height: fit-content;
     gap: 1.1rem;
   }
   .contact__form-sub-cont {
     width: 46.31rem;
-    height: 28.25rem;
+    min-height: 28.25rem;
   }
   .--w-custom {
     width: 48%;
@@ -171,7 +172,9 @@
 
   .contact__form-img {
     width: 22.43rem;
-    height: 28.25rem;
+    height: auto;
+    padding: 0 1.4375rem;
+    object-fit: contain;
   }
 
   /* Aside content */

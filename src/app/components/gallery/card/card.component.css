@@ -111,9 +111,8 @@
 .button__icon path{
   fill: var(--fnt-clr-button-banner);
 }
-
 /* Desktop */
-@media screen and (min-width:1120px) {
+@media screen and (min-width:1264px) {
   .card{
     display: flex;
     flex-direction: column;

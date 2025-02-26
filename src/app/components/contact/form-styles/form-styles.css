@@ -2,7 +2,7 @@
 /* Form ----------------------------------*/
 .contact__form-cont {
   width: 100%;
-  height: fit-content;
+  height: max-content;
   gap: 1.5rem;
 }
 .contact__form-sub-cont {
@@ -11,8 +11,8 @@
   border-radius: 1.5rem;
   padding: 24px;
   row-gap: 1.5rem;
-  box-sizing: border-box;
 }
+
 .contact__form-header {
   height: fit-content;
 }
@@ -26,18 +26,16 @@
   color: var(--bread-font);
   transition: all 200ms ease-in-out;
 }
+
 .form {
   gap: 24px;
 }
-
 /* input structure -----------------*/
 .form__group {
   position: relative;
   width: 100%;
-  /* min-height: 3.5rem; */
-  height: fit-content;
+  min-height: 3.5rem;
   row-gap: 4px;
-  /* border: 1px solid red; */
 }
 .form__group-label {
   padding: 0 4px;
@@ -84,12 +82,15 @@
     background-color: blue;
   } */
 }
-.--text-area{
+.--text-area {
   resize: none;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .--h-custom {
   height: 5.75rem;
+}
+.--select {
+  padding: 0 0.625rem;
 }
 .form__button {
   padding: 0.625rem 0.75rem;
@@ -119,4 +120,8 @@
   width: 60%;
   height: auto;
   object-fit: cover;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--aside-fnt-clr-02);
+  background-color: var(--green-50);
 }

@@ -193,6 +193,32 @@ app-card {
   transform: rotate(180deg);
 }
 
+@media screen and (min-width:672px) and (max-width:1264px){
+  .arrow-slider{
+    top: 50%;
+  }
+}
+@media screen and (min-width:430px) and (max-width:672px){
+  .arrow-slider{
+    top: 60%;
+  }
+}
+
+@media screen and (max-width:430px){
+  .arrow-slider{
+    right: -1rem;
+  }
+  .--left-arrow {
+    right: none;
+    left: -1.1rem;
+  }
+}
+@media screen and (max-width:390px){
+  .arrow-slider{
+    top: 65%;
+  }
+}
+
 
 
 

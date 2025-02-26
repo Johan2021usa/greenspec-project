@@ -1,5 +1,6 @@
 /* Desktop version */
-@media screen and (min-width: 1320px) {
+/* @media screen and (min-width: 1127px) { */
+@media screen and (min-width: 1264px) {
   .gallery {
     justify-content: flex-start;
     max-height: 30rem;

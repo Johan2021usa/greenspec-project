@@ -13,7 +13,7 @@
 
   <section class="contact__group-cont --flex --fd-column --ii-center">
 
-    <!-- Header -->
+    <!-- Header contact-->
     <header class="contact__header-cont --flex --fd-column --ii-center --f-wrap">
       <h1 class="contact__header-title --m-0 --f-wrap">Contact us</h1>
       <p class="contact__header-description --m-0 --f-wrap">Have questions? Need support? Get in touch with us and our team will be happy to assist you.</p>
@@ -26,12 +26,13 @@
 
       <section class="contact__form-sub-cont --flex --fd-column --bs-b-box">
 
+        <!-- header form -->
         <header class="contact__form-header">
           <h3 class="contact__form-title --m-0">Please fill in the form</h3>
           <p class="contact__form-description --m-0">Let us know how we can help you. Fill in your details, and we'll get back to you as soon as possible.</p>
         </header>
 
-
+        <!-- Form  -->
         <form class="form --flex --f-wrap --bs-b-box" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
           <!-- name field -->
@@ -76,12 +77,16 @@
 
           <!-- Drop down -->
           <div class="form__group --flex --fd-column --bs-b-box">
-            <label for="contactReason">Contact Reason</label>
-            <select id="contactReason" formControlName="contactReason" required>
+            <label class="form__group-label" for="contactReason">Contact Reason</label>
+            <select class="form__group-input --select --bs-b-box"
+            id="contactReason"
+            formControlName="contactReason"
+            required>
               <option value="Sales Inquiry">Sales Inquiry</option>
               <option value="Technical Support">Technical Support</option>
               <option value="Partnership Opportunities">Partnership Opportunities</option>
               <option value="Other">Other</option>
+              <option value="" disabled selected hidden>Select</option>
             </select>
             <div *ngIf="contactForm.get('contactReason')?.invalid && contactForm.get('contactReason')?.touched" class="error">
               Please select a contact reason.
@@ -103,14 +108,16 @@
             </div>
           </div>
 
+          <!-- button -->
           <button class="form__button --primary" type="submit" [disabled]="contactForm.invalid">Send</button>
-
         </form>
+
       </section>
 
-      <img class="contact__form-img" src="assets/images/form-img.png" alt="pc-form-image">
-    </section>
+      <!-- form image -->
+      <img class="contact__form-img --bs-b-box" src="assets/images/contact_img.png" alt="pc-form-image">
 
+    </section>
 
     <!-- aside content -->
     <section class="contact__info-cont --flex --fd-column --bs-b-box">
